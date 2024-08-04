@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to right, #2346fd, #76543a);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .enter {
+            display: flex;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .enter input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+        .enter button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            background-color: #2346fd;
+            color: white;
+            cursor: pointer;
+        }
+        .enter button:hover {
+            background-color: #1a35bd;
+        }
+        .todo-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .todo-item li {
+            list-style: none;
+            flex: 1;
+        }
+        .todo-item button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff4d4d;
+            color: white;
+            cursor: pointer;
+        }
+        .todo-item button:hover {
+            background-color: #e60000;
+        }
+        .header {
+            font-size: 2em;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">To-Do App</h1>
+    <section class="center">
+        <div class="enter">
+            <input type="text" id="todoInput" placeholder="Write your to-do">
+            <button id="addBtn" onclick="addTodo()">Add To-Do</button>
+        </div>
+    </section>
+
+        <div class="todos" id="todoList"></div>
+   
+    <script src="file.js"></script>
+</body>
+</html>
